@@ -127,7 +127,6 @@ PRODUCT_PACKAGES += \
     lights.encore \
     sensors.encore \
     uim-sysfs \
-    libbt-vendor \
     libaudioutils \
     audio.a2dp.default \
     libaudiohw_legacy \
@@ -151,7 +150,9 @@ PRODUCT_PACKAGES += \
 # libraries needed for a particular device
 PRODUCT_PACKAGES += \
     libI420colorconvert \
+    libLCML \
     libOMX_Core \
+    libOMX.TI.AAC.decode \
     libOMX.TI.AAC.encode \
     libOMX.TI.AMR.decode \
     libOMX.TI.AMR.encode \
@@ -171,10 +172,10 @@ PRODUCT_PACKAGES += \
     libOMX.TI.Video.Decoder \
     libOMX.TI.Video.encoder \
     libOMX.TI.VPP \
+    libOMX.TI.WBAMR.decode \
     libOMX.TI.WBAMR.encode \
     libOMX.TI.WMA.decode \
     libVendor_ti_omx
-
 
 PRODUCT_PACKAGES += \
         libskiahw
@@ -193,9 +194,8 @@ PRODUCT_PACKAGES += \
 
 PRODUCT_CHARACTERISTICS := tablet
 
-# Screen size is "large", density is "mdpi", need "hdpi" for extra drawables in 10.1
-PRODUCT_AAPT_CONFIG := large mdpi hdpi
-PRODUCT_AAPT_PREF_CONFIG := mdpi
+# Screen size is "large", density is "mdpi"
+PRODUCT_AAPT_CONFIG := large mdpi
 
 # we have enough storage space to hold precise GC data
 PRODUCT_TAGS += dalvik.gc.type-precise
