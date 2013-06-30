@@ -82,7 +82,7 @@ BOARD_FLASH_BLOCK_SIZE := 4096
 BOARD_USES_UBOOT := true
 
 # Inline kernel building config
-TARGET_KERNEL_CONFIG := encore_novagen_defconfig
+TARGET_KERNEL_CONFIG := encore_aokp_defconfig
 TARGET_KERNEL_SOURCE := kernel/bn/encore
 
 # Connectivity - Wi-Fi
